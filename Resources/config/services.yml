@@ -1,0 +1,5 @@
+services:
+    mindy.bundle.review.admin.review:
+        class: Mindy\Bundle\ReviewBundle\Admin\ReviewAdmin
+        tags:
+            - { name: admin.admin, slug: review_review }

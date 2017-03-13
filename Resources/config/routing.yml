@@ -1,0 +1,5 @@
+review_list:
+    path: /
+    defaults:
+        _controller: ReviewBundle:Review:list
+    methods: [ POST, GET ]
