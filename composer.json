@@ -1,0 +1,18 @@
+{
+  "name": "mindy/review-bundle",
+  "description": "ReviewBundle",
+  "type": "mindy-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maksim Falaleev",
+      "email": "max@studio107.ru"
+    }
+  ],
+  "require": {
+    "mindy/orm-bundle": "~3.0",
+    "mindy/form-bundle": "~3.0",
+    "mindy/mail-bundle": "~3.0",
+    "mindy/template-bundle": "~3.0"
+  }
+}
