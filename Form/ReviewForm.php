@@ -1,14 +1,15 @@
 <?php
 
 /*
- * (c) Studio107 <mail@studio107.ru> http://studio107.ru
- * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
+ * This file is part of Mindy Framework.
+ * (c) 2017 Maxim Falaleev
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Mindy\Bundle\ReviewBundle\Form;
 
-use Mindy\Bundle\AdminBundle\Form\Type\ButtonsType;
 use Mindy\Bundle\ReviewBundle\Model\Review;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -36,7 +37,7 @@ class ReviewForm extends AbstractType
                 ],
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Оставить отзыв'
+                'label' => 'Оставить отзыв',
             ]);
     }
 

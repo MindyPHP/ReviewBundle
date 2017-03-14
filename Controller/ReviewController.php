@@ -1,9 +1,11 @@
 <?php
 
 /*
- * (c) Studio107 <mail@studio107.ru> http://studio107.ru
- * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
+ * This file is part of Mindy Framework.
+ * (c) 2017 Maxim Falaleev
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Mindy\Bundle\ReviewBundle\Controller;
@@ -23,7 +25,7 @@ class ReviewController extends Controller
         $review = new Review();
         $form = $this->createForm(ReviewForm::class, $review, [
             'method' => 'POST',
-            'action' => $this->generateUrl('review_list')
+            'action' => $this->generateUrl('review_list'),
         ]);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -42,7 +44,7 @@ class ReviewController extends Controller
         return $this->render('review/list.html', [
             'reviews' => $pager->paginate(),
             'pager' => $pager->createView(),
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ]);
     }
 }

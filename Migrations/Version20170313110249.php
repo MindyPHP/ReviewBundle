@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of Mindy Framework.
+ * (c) 2017 Maxim Falaleev
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Mindy\Bundle\ReviewBundle\Migrations;
 
 use Doctrine\DBAL\Migrations\AbstractMigration;
@@ -18,7 +26,7 @@ class Version20170313110249 extends AbstractMigration
     {
         foreach (Review::objects()->batch(100) as $reviews) {
             foreach ($reviews as $review) {
-                /** @var Review $review */
+                /* @var Review $review */
                 $review->created_at = $review->timestamp;
                 $review->save(['created_at']);
             }
