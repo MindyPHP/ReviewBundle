@@ -10,7 +10,7 @@
 {% block content %}
     <div class="b-wrapper">
         <div class="b-row">
-            <div class="b-col b-col_small_12">
+            <div class="b-col b-col_small_8">
                 <h1 class="b-heading">Отзывы</h1>
 
                 {% for review in reviews %}
@@ -18,9 +18,8 @@
                 {% endfor %}
 
                 {{ pagination_render(pager)|safe }}
-
-                <div class="b-divider"></div>
-
+            </div>
+            <div class="b-col b-col_small_4">
                 <h2 class="b-heading">Оставить отзыв</h2>
                 {{ form_render(form)|safe }}
             </div>
